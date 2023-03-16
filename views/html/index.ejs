@@ -1,0 +1,45 @@
+<%- include('./partials/header.ejs')  %>
+
+    <div class="ugf-bg ufg-main-container">
+      <div class="ugf-progress">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 33.33%" aria-valuenow="33.33" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>  
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="ugf-form">
+              <form action="/next">
+                <div class="input-block">
+                  <h4>Issuing Country/Region</h4>
+                  <div class="country-select-wrap">
+                    <input type="text" id="country" />
+                    <input type="hidden" id="country_code" />
+                  </div>    
+                </div>
+                <div class="input-block">
+                  <h4>Select Contract Type</h4>
+                  <p>Should be an original and verifiable contract.</p>
+               
+                  <div class="custom-form-group">
+                    <input type="radio" name="package-plan" class="custom-form-control" id="passport">
+                    <label for="passport">
+                      <span class="text">Cost plus contract</span>
+                      <span class="icon">
+                        <img src="images/passport.png" class="img-fluid" alt="">
+                      </span>
+                    </label>
+                  
+                  </div>
+          
+                </div>
+                <button class="btn">Next Step &nbsp; &#10140;</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer.ejs')  %>

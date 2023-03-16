@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs')  %>
+
+    <div class="ugf-bg ufg-main-container">
+      <div class="ugf-progress">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 66.66%" aria-valuenow="66.66" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 offset-lg-3">
+            <div class="ugf-form">
+              <form action="/get-contract" method="post">
+                
+                <div class="input-block">
+                  <h4>Contract ID Number</h4>
+                  <div class="form-group">
+                    <input type="text" name="number" class="form-control" placeholder="e.g.  1234 0256 0145" id="nid-number" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn">Next Step &nbsp; &#10140;</button>
+              </form>
+              <a href="/" class="back-to-prev"><img src="images/arrow-left-grey.png" alt=""> Back to Previous</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('./partials/footer.ejs')  %>
