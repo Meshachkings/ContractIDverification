@@ -16,13 +16,13 @@ router.get('/', (req, res) => {
 
 router.post('/post', upload.single('image'), async (req, res) => {
     const { contract_name, awarded_by, awarded_to, state_, address,
-        duration, company, contract_amount } = req.body;
+        duration, company, contract_amount,date } = req.body;
 
     const image = req.file.path;
         console.log(image)
     new Contract(
         {contract_name,awarded_by,awarded_to,state_,address,
-        duration,company,contract_amount ,image}
+        duration,company,contract_amount,date ,image}
         ).save()
         .then((result) => {
             res.redirect('/table')

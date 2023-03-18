@@ -5,6 +5,7 @@ const contract_schema = new mongoose.Schema({
     awarded_by: String,
     awarded_to: String,
     state_: String,
+    date: String,
     address: String,
     duration: String,
     company: String,

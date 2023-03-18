@@ -94,6 +94,21 @@ app.get('/final', async (req, res) => {
     })
     
 } )
+app.get('/document/:id', async (req, res) => {
+    const id = req.params.id;
+    await Contract.findById(id)
+    .then((result) => {
+        if(!result){
+            return res.redirect('/')
+        }
+    
+        res.render("html/document", {result})
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+    
+} )
 
 app.get('/delete/:id', (req, res) =>{
     const id = req.params.id;
