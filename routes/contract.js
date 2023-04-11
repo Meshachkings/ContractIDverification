@@ -50,9 +50,9 @@ router.post('/post',  upload.single('image'), async (req, res) => {
           return;
         }
         const { contract_name, awarded_by, awarded_to, state_, address, duration, company, contract_amount, date } = req.body;
-        const image = result.secure_url;
-        // console.log( result.secure_url)
-        new Contract({ contract_name, awarded_by, awarded_to, state_, address, duration, company, contract_amount, date, image })
+        const image = result.url;
+        // console.log( result.url)
+        new Contract({ contract_name, awarded_by, awarded_to, state_, address, duration, company, contract_amount, date })
         .save()
           .then((result) => {
             res.redirect('/table')
